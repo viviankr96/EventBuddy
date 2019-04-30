@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EventBuddy---Login</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="login1.css">
+	<script type="text/javascript">
+		function valid(){
+			var id=document.getElementById("uid");
+			var pass=document.getElementById("pass1");
+			if(id.value=="")
+			{
+				alert("User id is required");
+				id.focus();
+				return false;
+			}
+			else if(pass.value=="")
+			{
+				alert("Password is required");
+				pass.focus();
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+
+		function valid1(){
+			var n=document.getElementById("name");
+			var e=document.getElementById("email");
+			var p1=document.getElementById("pass2");
+			var p2=document.getElementById("pass3");
+			if(n.value=="")
+			{
+				alert("Name required");
+				n.focus();
+				return false;
+			}
+			else if(e.value=="")
+			{
+				alert("Email Id required");
+				e.focus();
+				return false;
+			}
+			else if(p1.value=="")
+			{
+				alert("Password required");
+				p1.focus();
+				return flase;
+			}
+			else if(p2.value=="")
+			{
+				alert("Password not matched");
+				p2.focus();
+				return false;
+			}
+			else if(p1.value.length!=p2.value.length)
+			{
+				alert("Password not matched");
+				p1.focus();
+				return flase;
+			}
+			else
+			{
+				return true;
+			}
+		}
+
+	</script>
+	<style type="text/css">
+		.mainDiv{
+			background-image: url("marraige.jpg");
+		}
+	</style>
+</head>
+<body>
+	<div class="mainDiv">
+	<center><img src="332fc5d8-8d5c-4546-9593-987146e03eb3.png" style="height: 100px; width: 40%"></center>
+	</div>
+	<div class="row">
+	<div class="login1 col col-sm-6">
+		<h1 style="color:red; text-align: center;">Login</h1>
+	<form method="post" action="" class="form-group" onsubmit="return valid()">
+	<div class="form-group">
+		<input type="text" id="uid" name="" class="form-control" placeholder="user id">		
+	</div>
+	<div class="form-group">
+		<input type="password" id="pass1" name="" class="form-control" placeholder="password">
+	</div>
+	<div class="form-group">
+		<button class="form-control btn btn-warning" onclick="">Login</button>
+	</div>
+    </form>
+	</div>
+	<div class="col col-sm-6">
+		<h1 style="color: red; text-align: center;">Sign up</h1>
+		<form method="post" action="" class="form-group" onsubmit="return valid1()">
+			<div class="form-group">
+				<input type="text" id="name" name="" class="form-control" placeholder="Name">
+			</div>
+			<div class="form-group">
+				<input type="text" id="email" name="" class="form-control" placeholder="Email Id">
+			</div>
+			<div class="form-group">
+				<input type="Password" id="pass2" name="" class="form-control" placeholder="New Password">
+			</div>
+			<div class="form-group">
+				<input type="Password" id="pass3" name="" class="form-control" placeholder="Confirm Password">
+			</div>
+			<div class="form-group">
+				<button class="form-control btn btn-warning" onclick="">Signup</button>
+			</div>
+		</form>
+	</div>
+</div>
+<div>
+	<a href=""><h1 style="color: red; text-align: center;">Event Buddy: An Expert in Organizing Events</a></h1>
+</div>
+</body>
+</html>
